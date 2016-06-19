@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="es" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="es" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="es" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="es" class="no-js"> <!--<![endif]-->
+    <head>
+    	<!-- meta character set -->
+        <meta charset="utf-8">
+		<!-- Always force latest IE rendering engine or request Chrome Frame -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Senderos de Mallorca</title>
+		<!-- Meta Description -->
+        <meta name="description" content="Senderos de Mallorca">
+
+		<!-- Mobile Specific Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- CSS
+		================================================== -->
+
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+		<!-- Fontawesome Icon font -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+		<!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/jquery.fancybox.css">
+		<!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+		<!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/owl.carousel.css">
+		<!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/slit-slider.css">
+		<!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/animate.css">
+		<!-- Main Stylesheet -->
+        <link rel="stylesheet" href="css/main.css">
+
+
+		<!-- Modernizer Script for old Browsers -->
+        <script src="js/modernizr-2.6.2.min.js"></script>
+
+        <style type="text/css">
+        @font-face {
+        	font-family: mifuente;
+        	src: url("mifuente.ttf");
+        }
+
+        body{
+        	font-family: mifuente;
+        }
+
+
+        .Titulos {
+        	display: block;
+    		font-size: 24px;
+    		margin-bottom: 45px;
+    	    vertical-align: middle;
+    		display: table-cell;
+        }
+
+        .Titulos h2 {
+        	color: #fff;
+    		font-size: 52px;
+    		font-weight: 400;
+    		margin-bottom: 25px;
+    		text-transform: uppercase;
+        }
+
+        .ContenidoFormulario{
+        	color: #F7FC5D;
+        	font-weight: bold;
+        	width: 50%;
+        	margin-left: 25%;
+        	margin-top: 17%;
+        	padding-bottom: 10%;
+        }
+       .inputFormu{
+        	background-color: #FAFAD5;
+        	color:black;
+        }
+        .Formu{
+        	margin-top: 10%;
+        	margin-left: 10%;
+        }
+
+        p.consejo{
+        	font-size: 12px;
+        }
+
+        .tituloRegistro{
+
+        	font-size: 32px;
+        	font-weight: bold;
+        	color: #F9F636;
+        	margin-bottom: 12%;
+        	margin-top: -6%;
+        }
+
+        .posicionMenu{
+        	margin-left: 95%;
+        	margin-top: -4%;
+        	width: 60%;
+        	padding: 5%;
+        	color:#DED35C;
+
+        }
+
+        .posicionMenu input{
+        	font-size: 14px;
+        	padding-left: 1%;
+        }
+
+        .prueba{
+        	margin-left:-15%;
+        	margin-right: -25%;
+        }
+
+        .textoEjercicio{
+
+        }
+
+        .textoEjercicio h1 {
+
+        	font-weight: bold;
+        	text-align: center;
+        }
+
+        .textoEjercicio h3 {
+
+        	font-weight: bold;
+        	text-align: center;
+        }
+        .textoEjercicio p {
+        	color:#151313;
+        	font-family: mifuente;
+        }
+
+        .contenidoTexto {
+
+        	margin-left: 17.5%;
+        	margin-right: 17.5%;
+        	text-align: center;
+        }
+
+        </style>
+
+        <script type="text/javascript">
+
+        function logof(){
+        	window.location.href = "logof.php";
+        }
+
+        function index(){
+        	window.location.href = "index.php";
+        }
+
+        function noticias(){
+        	window.location.href = "noticias.php";
+        }
+        function nuevaRuta(){
+        	window.location.href = "nuevaruta.php";
+        }
+        function nuevaNoticia(){
+        	window.location.href = "nuevanoticia.php";
+        }
+        function nuevaRuta(){
+        	window.location.href = "nuevaruta.php";
+        }
+        function adminRuta(){
+        	window.location.href = "adminruta.php";
+        }
+        function adminNoticia(){
+        	window.location.href = "adminnoticia.php";
+        }
+        function adminUsuarios(){
+        	window.location.href = "gestionusuarios.php";
+        }
+        function entrenamiento(){
+        	window.location.href = "entrenamiento.php";
+        }
+        function leyes(){
+            window.location.href = "leyes.php";
+        }
+
+        </script>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+			$('div.posicionMenu').hide();
+			    $("a.Ocultame").click(function(){
+			       	if($('a.Ocultame').attr("id") == "oculto"){
+			       		$('div.posicionMenu').show();
+			       		$('a.Ocultame').attr("id","visible");
+			       	}else{
+			       		$('div.posicionMenu').hide();
+			       		$('a.Ocultame').attr("id","oculto");
+			       	}
+
+			    });
+
+			$('a.ruta').click(function(){
+					$('a.ruta').attr('href', "http://localhost/Proyecto/controllers/ruta.php?id="+$(this).attr("id"));
+				});
+		});
+
+
+		</script>
+
+
+    </head>
+    <body>
+
+
+    <!-- START BLOCK : menu0 -->
+
+        <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
+            <div class="container">
+                <ul id="nav" class="nav navbar-nav">
+                    <li><a href="index.php" onclick="index()">Home</a></li>
+                    <li><a href="#" onclick="noticias()">Noticias</a></li>
+                    <li><a href="#" onclick="leyes()">Leyes y prohibiciones</a></li>
+                    <li><a href="#" onclick="entrenamiento()">Entrenamiento</a></li>
+                    <li><a href="#" class="Ocultame" id="oculto">Conectarse</a></li>
+                    <div class="posicionMenu">
+                        <table>
+                            <form name='input' method="POST">
+                                <tr>
+                                    <td><label class="control-label"  for="username">Nombre de usuario</label></td>
+                                    <td><input type="text" id="username" name="username" placeholder="" class="inputFormu" required></td>
+                                </tr>
+                                <tr>
+                                    <td><label class="control-label" for="password">Contraseña</label></td>
+                                    <td><input type="password" id="password" name="password" placeholder="" class="inputFormu" required></td>
+                                </tr>
+                                <tr>
+                                    <td><input type='submit' class="btn btn-success" name="Enviar"></input></td>
+                                </tr>
+                            </form>
+                        </table>
+                    </div>
+                </ul>
+            </div>
+        </header>
+
+    <!-- END BLOCK : menu0 -->
+
+    <!-- START BLOCK : menu1 -->
+
+        <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
+            <div class="container">
+                <nav class="collapse navbar-collapse navbar-right" role="navigation">
+                    <ul id="nav" class="prueba nav navbar-nav">
+                        <li><a href="index.php" onclick="index()">Home</a></li>
+                        <li><a href="#" onclick="noticias()">Noticias</a></li>
+                        <li><a href="#" onclick="leyes()">Leyes y prohibiciones</a></li>
+                        <li><a href="#" onclick="nuevaRuta()">Agregar nueva Ruta</a></li>
+                        <li><a href="#" onclick="nuevaNoticia()">Agregar nueva Noticia</a></li>
+                        <li><a href="#" onclick="entrenamiento()">Entrenamiento</a></li>
+                        <li><a href="#">Bienvenido, {nombre}</a></li>
+                        <li><a href="#" onclick="logof()">Desconectar</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+    <!-- END BLOCK : menu1 -->
+
+    <!-- START BLOCK : banner0 -->
+	<main class="site-content" role="main">
+		<section id="home-slider">
+            <div id="slider" class="sl-slider-wrapper">
+
+				<div class="sl-slider">
+
+					<div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+
+						<div class="bg-img bg-img-1"></div>
+
+						<div class="slide-caption">
+                            <div class="caption-content">
+                                <h2 class="animated fadeInDown">Senderos de Mallorca</h2>
+                                <span class="animated fadeInDown">Rutas y excursiones por los senderos de Mallorca</span>
+                                <a href="registro.php" class="btn btn-blue btn-effect">Únete a nosotros</a>
+                            </div>
+                        </div>
+
+					</div>
+
+					<div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+
+						<div class="bg-img bg-img-2"></div>
+						<div class="slide-caption">
+                            <div class="caption-content">
+                                <h2>Senderos de Mallorca</h2>
+                                <span>Rutas y excursiones por los senderos de Mallorca</span>
+                                <a href="registro.php" class="btn btn-blue btn-effect">Únete a nosotros</a>
+                            </div>
+                        </div>
+
+					</div>
+
+					<div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+
+						<div class="bg-img bg-img-3"></div>
+						<div class="slide-caption">
+                            <div class="caption-content">
+                                <h2>Senderos de Mallorca</h2>
+                                <span>Rutas y excursiones por los senderos de Mallorca</span>
+                                <a href="registro.php" class="btn btn-blue btn-effect">Únete a nosotros</a>
+                            </div>
+                        </div>
+
+					</div>
+
+				</div>
+
+                <nav id="nav-arrows" class="nav-arrows hidden-xs hidden-sm visible-md visible-lg">
+                    <a href="javascript:;" class="sl-prev">
+                        <i class="fa fa-angle-left fa-3x"></i>
+                    </a>
+                    <a href="javascript:;" class="sl-next">
+                        <i class="fa fa-angle-right fa-3x"></i>
+                    </a>
+                </nav>
+
+
+				<nav id="nav-dots" class="nav-dots visible-xs visible-sm hidden-md hidden-lg">
+					<span class="nav-dot-current"></span>
+					<span></span>
+					<span></span>
+				</nav>
+
+			</div>
+		</section>
+	<!-- END BLOCK : banner0 -->
+
+	<!-- START BLOCK : banner1 -->
+		<main class="site-content" role="main">
+			<section id="home-slider">
+	            <div id="slider" class="sl-slider-wrapper">
+
+					<div class="sl-slider">
+
+						<div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+
+							<div class="bg-img bg-img-1"></div>
+
+							<div class="slide-caption">
+	                            <div class="caption-content">
+	                                <h2 class="animated fadeInDown">Senderos de Mallorca</h2>
+	                                <span class="animated fadeInDown">Rutas y excursiones por los senderos de Mallorca</span>
+	                                <a href="#" class="btn btn-blue btn-effect">Bienvenido, {nombre}</a>
+	                            </div>
+	                        </div>
+
+						</div>
+
+						<div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+
+							<div class="bg-img bg-img-2"></div>
+							<div class="slide-caption">
+	                            <div class="caption-content">
+	                                <h2>Senderos de Mallorca</h2>
+	                                <span>Rutas y excursiones por los senderos de Mallorca</span>
+	                                <a href="#" class="btn btn-blue btn-effect">Bienvenido, {nombre}</a>
+	                            </div>
+	                        </div>
+
+						</div>
+
+						<div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+
+							<div class="bg-img bg-img-3"></div>
+							<div class="slide-caption">
+	                            <div class="caption-content">
+	                                <h2>Senderos de Mallorca</h2>
+	                                <span>Rutas y excursiones por los senderos de Mallorca</span>
+	                                <a href="#" class="btn btn-blue btn-effect">Bienvenido, {nombre}</a>
+	                            </div>
+	                        </div>
+
+						</div>
+
+					</div>
+
+	                <nav id="nav-arrows" class="nav-arrows hidden-xs hidden-sm visible-md visible-lg">
+	                    <a href="javascript:;" class="sl-prev">
+	                        <i class="fa fa-angle-left fa-3x"></i>
+	                    </a>
+	                    <a href="javascript:;" class="sl-next">
+	                        <i class="fa fa-angle-right fa-3x"></i>
+	                    </a>
+	                </nav>
+
+
+					<nav id="nav-dots" class="nav-dots visible-xs visible-sm hidden-md hidden-lg">
+						<span class="nav-dot-current"></span>
+						<span></span>
+						<span></span>
+					</nav>
+
+				</div>
+			</section>
+		<!-- END BLOCK : banner1 -->
+
+	<!-- START BLOCK : entrenamiento -->
+			<section id="service">
+			<div class="textoEjercicio">
+				<h1>Como entrenarse para el senderismo </h1>
+				<div class="contenidoTexto">
+					<p>El senderismo no necesita ningún entrenamiento específico. Sin embargo, no podemos olvidarnos de hacer un pequeño calentamiento antes de iniciar la ruta en el que se realicen ejercicios de rotación de tobillos y rodillas, calentamiento en el resto de las piernas y también en la espalda. También es muy importante terminar la marcha con algunos estiramientos en los que se trabajen fundamentalmente todos los músculos del tren inferior y la espalda.</p>
+					<br>
+					<br>
+					<p>Aquellas personas que deseen realizar rutas más largas y complejas (atravesando arroyos, pasando por zonas rocosas, caminando por senderos con gran altitud sobre el nivel del mar…) deben tener una condición física óptima. Lo ideal es empezar por rutas de senderismo sencillas y, a medida que se vaya aumentando la capacidad, ir realizando caminatas con mayor exigencia.</p>
+					<br>
+					<br>
+					<p>Dentro del entrenamiento, también es importante aprender a andar. Parece extraño este consejo para personas adultas, pero caminar por ciertos senderos no es fácil. Por ejemplo, cuando estemos en una ruta con desnivel ascendente, hay que colocar el cuerpo erguido y tener en cuenta que el peso recae sobre la pierna adelantada, por lo que es importante apoyar bien toda la planta del pie para que los gemelos no hagan un sobreesfuerzo. Por otro lado, en las bajadas, hay que poner especial atención en las rodillas, que deben estar ligeramente flexionadas; además, hay que buscar los lugares más horizontales posibles para apoyar toda la planta del pie y hacerlo a una velocidad adecuada para no correr el riesgo de caernos.</p>
+					<br>
+					<br>
+					<p>Aunque caminar es saludable para casi todo el mundo, es importante que las personas que sufran una enfermedad crónica o hayan pasado un accidente cardiopulmonar recientemente consulten con su especialista antes de calzarse las botas de senderismo. Quizá deban empezar con tranquilos paseos en un parque cercano a sus casas….</p>
+
+			<h1>Algunos ejercicios que puedes realizar</h1>
+
+				<h3>1. Sentadillas</h3>
+				<p>Manteniendo ambos pies separados a la altura de los hombros, descendemos los glúteos como si fuéramos a sentarnos, asegurándonos de que nuestras rodillas no sobresalen por delante de los dedos del pie.  Descendemos hasta que nuestras piernas alcancen un ángulo de 90º o inferior y subimos de nuevo hasta la posición original.</p>
+				<br>
+
+				<p>Repeticiones: 15 repeticiones cada una.</p>
+				<br>
+				<br>
+				<h3>2. Burpee</h3>
+				<p>En ocasiones, al realizar senderismo de montaña, podemos encontrar tramos del camino que pueden resultar algo más complicados y por los que probablemente no podamos andar normalmente, sino que tendremos que agacharnos para apoyar las manos y ayudándonos de ellas, conseguir salvar obstáculos, saltar rocas y sortear torrenteras de piedras. Para todas estas ocasiones que seguro se nos presentarán en una ascensión larga, es importante que nos encontremos ágiles para agacharnos, levantarnos y apoyarnos con fuerza en los brazos para utilizarlos como palanca.
+				<br>
+				<br>
+				De pie, nos agachamos en posición de cuclillas, apoyamos las manos y de un salto echamos las piernas hacia atrás para colocarnos en posición de fondos. Hacemos una flexión y de un salto recogemos las piernas y volvemos a la posición erguida de inicio.</p>
+				<br>
+				<p>Repeticiones: 6 en cada serie.</p>
+				<br>
+				<br>
+				<h3>3. Splits</h3>
+				<br>
+				<p>De pie con una pierna adelantada sobre la otra, saltamos en el sitio para cambiar la posición de las piernas, retrasando la delantera, y viceversa.</p>
+				<br>
+				<p>Repeticiones: 8 con cada pierna</p>
+				<br>
+				<br>
+				<h3>4. Steps en banco</h3>
+				<br>
+				<p>Delante de un banco, subimos una pierna y elevamos el cuerpo apoyándonos solo sobre esa pierna, descendemos de nuevo y cambiamos de pierna para subir de nuevo.</p>
+				<br>
+				<p>Repeticiones: 10 con cada pierna.</p>
+				<br>
+				<br>
+				<h2>Ejercicios para tonificar nuestra zona media</h2>
+				<br>
+				<p>Es importante que toda nuestra zona media esté bien musculada, de modo que podamos mantener erguida nuestra posición y que el esfuerzo que supone andar en ascensión no provoque molestias en la zona lumbar.</p>
+				<br>
+				<br>
+				<h3>5. Abdominales en V</h3>
+				<br>
+				<p>Tumbados boca arriba, elevamos al tiempo el tronco y las piernas (imitando una figura en V) como para querer tocarnos con las manos las puntas de los pies, descendemos al suelo y volvemos a realizar otra repetición.</p>
+				<br>
+				<p>Repeticiones: 8.</p>
+				<br>
+				<br>
+				<h3>6. Lumbares</h3>
+				<br>
+				<p>Tumbados boca abajo con los brazos estirados hacia adelante, tratamos de realizar el ejercicio inverso, elevando al tiempo los brazos y las piernas hacia arriba.</p>
+				<br>
+				<p>Repeticiones: 12.</p>
+				<br>
+				<br>
+				<h3>7. Plancha</h3>
+				<br>
+				<p>Tumbados boca abajo, nos apoyamos en las manos y en las puntas de los pies, como si estuviéramos en la posición inicial de fondos. Aguantamos en esta posición, un mínimo de 30 segundos y hasta un minuto. Realizamos el ejercicio mientras apretamos el abdomen fuertemente durante todo el ejercicio.</p>
+
+			</div>
+		</div>
+	</section>
+	<!-- END BLOCK : entrenamiento -->
+
+
+
+	<!-- START BLOCK : jquery -->
+		<!-- Main jQuery -->
+        <script src="js/jquery-1.11.1.min.js"></script>
+		<!-- Twitter Bootstrap -->
+        <script src="js/bootstrap.min.js"></script>
+		<!-- Single Page Nav -->
+        <script src="js/jquery.singlePageNav.min.js"></script>
+		<!-- jquery.fancybox.pack -->
+        <script src="js/jquery.fancybox.pack.js"></script>
+		<!-- Google Map API -->
+		<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+		<!-- Owl Carousel -->
+        <script src="js/owl.carousel.min.js"></script>
+        <!-- jquery easing -->
+        <script src="js/jquery.easing.min.js"></script>
+        <!-- Fullscreen slider -->
+        <script src="js/jquery.slitslider.js"></script>
+        <script src="js/jquery.ba-cond.min.js"></script>
+		<!-- onscroll animation -->
+        <script src="js/wow.min.js"></script>
+		<!-- Custom Functions -->
+        <script src="js/main.js"></script>
+    <!-- END BLOCK : jquery -->
+    </body>
+</html>

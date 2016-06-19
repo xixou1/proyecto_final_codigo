@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="es" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="es" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="es" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="es" class="no-js"> <!--<![endif]-->
+    <head>
+        <!-- meta character set -->
+        <meta charset="utf-8">
+        <!-- Always force latest IE rendering engine or request Chrome Frame -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Senderos de Mallorca</title>
+        <!-- Meta Description -->
+        <meta name="description" content="Senderos de Mallorca">
+
+        <!-- Mobile Specific Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- CSS
+		================================================== -->
+
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+		<!-- Fontawesome Icon font -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+		<!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/jquery.fancybox.css">
+		<!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+		<!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/owl.carousel.css">
+		<!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/slit-slider.css">
+		<!-- bootstrap.min -->
+        <link rel="stylesheet" href="css/animate.css">
+		<!-- Main Stylesheet -->
+        <link rel="stylesheet" href="css/main.css">
+
+
+		<!-- Modernizer Script for old Browsers -->
+        <script src="js/modernizr-2.6.2.min.js"></script>
+
+        <style type="text/css">
+        @font-face {
+        	font-family: mifuente;
+        	src: url("mifuente.ttf");
+        }
+
+        body{
+        	font-family: mifuente;
+        }
+
+        .ContenidoFormulario{
+        	color: #F7FC5D;
+        	font-weight: bold;
+        	width: 50%;
+        	margin-left: 25%;
+        	margin-top: 17%;
+        	padding-bottom: 10%;
+        }
+       .inputFormu{
+        	background-color: #FAFAD5;
+        	color:black;
+        }
+        .Formu{
+        	margin-top: 10%;
+        	margin-left: 10%;
+        }
+
+        p.consejo{
+        	font-size: 12px;
+        }
+
+        .tituloRegistro{
+
+        	font-size: 32px;
+        	font-weight: bold;
+        	color: #F9F636;
+        	margin-bottom: 12%;
+        	margin-top: -6%;
+        }
+
+        .posicionMenu{
+        	margin-left: 95%;
+        	margin-top: -4%;
+        	width: 60%;
+        	padding: 5%;
+        	color:#DED35C;
+
+        }
+
+        .posicionMenu input{
+        	font-size: 14px;
+        	padding-left: 1%;
+        }
+
+        .prueba{
+            margin-left:-15%;
+            margin-right: -25%;
+        }
+
+        </style>
+
+        <script type="text/javascript">
+
+        function logof(){
+            window.location.href = "logof.php";
+        }
+
+        function index(){
+            window.location.href = "index.php";
+        }
+
+        function noticias(){
+            window.location.href = "noticias.php";
+        }
+        function nuevaRuta(){
+            window.location.href = "nuevaruta.php";
+        }
+        function nuevaNoticia(){
+            window.location.href = "nuevanoticia.php";
+        }
+        function nuevaRuta(){
+            window.location.href = "nuevaruta.php";
+        }
+        function adminRuta(){
+            window.location.href = "adminruta.php";
+        }
+        function adminNoticia(){
+            window.location.href = "adminnoticia.php";
+        }
+        function adminUsuarios(){
+            window.location.href = "gestionusuarios.php";
+        }
+        function entrenamiento(){
+            window.location.href = "entrenamiento.php";
+        }
+        function leyes(){
+            window.location.href = "leyes.php";
+        }
+
+        </script>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+			$('div.posicionMenu').hide();
+			    $("a.Ocultame").click(function(){
+			       	if($('a.Ocultame').attr("id") == "oculto"){
+			       		$('div.posicionMenu').show();
+			       		$('a.Ocultame').attr("id","visible");
+			       	}else{
+			       		$('div.posicionMenu').hide();
+			       		$('a.Ocultame').attr("id","oculto");
+			       	}
+
+			    });
+		});
+		</script>
+
+
+
+
+    </head>
+
+    <body>
+
+    <!-- START BLOCK : menu0 -->
+
+        <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
+            <div class="container">
+                <ul id="nav" class="nav navbar-nav">
+                    <li><a href="index.php" onclick="index()">Home</a></li>
+                    <li><a href="#" onclick="noticias()">Noticias</a></li>
+                    <li><a href="#" onclick="leyes()">Leyes y prohibiciones</a></li>
+                    <li><a href="#" onclick="entrenamiento()">Entrenamiento</a></li>
+                    <li><a href="#" class="Ocultame" id="oculto">Conectarse</a></li>
+                    <div class="posicionMenu">
+                        <table>
+                            <form name='input' method="POST">
+                                <tr>
+                                    <td><label class="control-label"  for="username">Nombre de usuario</label></td>
+                                    <td><input type="text" id="username" name="username" placeholder="" class="inputFormu" required></td>
+                                </tr>
+                                <tr>
+                                    <td><label class="control-label" for="password">Contraseña</label></td>
+                                    <td><input type="password" id="password" name="password" placeholder="" class="inputFormu" required></td>
+                                </tr>
+                                <tr>
+                                    <td><input type='submit' class="btn btn-success" name="Enviar"></input></td>
+                                </tr>
+                            </form>
+                        </table>
+                    </div>
+                </ul>
+            </div>
+        </header>
+
+    <!-- END BLOCK : menu0 -->
+
+    <!-- START BLOCK : menu1 -->
+
+        <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
+            <div class="container">
+                <nav class="collapse navbar-collapse navbar-right" role="navigation">
+                    <ul id="nav" class="prueba nav navbar-nav">
+                        <li><a href="index.php" onclick="index()">Home</a></li>
+                        <li><a href="#" onclick="noticias()">Noticias</a></li>
+                        <li><a href="#" onclick="leyes()">Leyes y prohibiciones</a></li>
+                        <li><a href="#" onclick="nuevaRuta()">Agregar nueva Ruta</a></li>
+                        <li><a href="#" onclick="nuevaNoticia()">Agregar nueva Noticia</a></li>
+                        <li><a href="#" onclick="entrenamiento()">Entrenamiento</a></li>
+                        <li><a href="#">Bienvenido, {nombre}</a></li>
+                        <li><a href="#" onclick="logof()">Desconectar</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+    <!-- END BLOCK : menu1 -->
+
+    <!-- START BLOCK : menu2 -->
+
+        <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
+            <div class="container">
+                <nav class="collapse navbar-collapse navbar-right" role="navigation">
+                    <ul id="nav" class="nav navbar-nav">
+                        <li><a href="index.php" onclick="index()">Home</a></li>
+                        <li><a href="#" onclick="adminRuta()">Administrar Rutas</a></li>
+                        <li><a href="#" onclick="adminNoticia()">Administrar Noticias</a></li>
+                        <li><a href="#" onclick="adminUsuarios()">Administrar cuentas</a></li>
+                        <li><a href="#">Bienvenido, {nombre}</a></li>
+                        <li><a href="logof.php" onclick="logof()">Desconectar</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+    <!-- END BLOCK : menu2 -->
+
+ <!-- START BLOCK : banner0 -->
+    <main class="site-content" role="main">
+        <section id="home-slider">
+            <div id="slider" class="sl-slider-wrapper">
+
+                <div class="sl-slider">
+
+                    <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+
+                        <div class="bg-img bg-img-1"></div>
+
+                        <div class="slide-caption">
+                            <div class="caption-content">
+                                <h2 class="animated fadeInDown">Senderos de Mallorca</h2>
+                                <span class="animated fadeInDown">Rutas y excursiones por los senderos de Mallorca</span>
+                                <a href="registro.php" class="btn btn-blue btn-effect">Únete a nosotros</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+
+                        <div class="bg-img bg-img-2"></div>
+                        <div class="slide-caption">
+                            <div class="caption-content">
+                                <h2>Senderos de Mallorca</h2>
+                                <span>Rutas y excursiones por los senderos de Mallorca</span>
+                                <a href="registro.php" class="btn btn-blue btn-effect">Únete a nosotros</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+
+                        <div class="bg-img bg-img-3"></div>
+                        <div class="slide-caption">
+                            <div class="caption-content">
+                                <h2>Senderos de Mallorca</h2>
+                                <span>Rutas y excursiones por los senderos de Mallorca</span>
+                                <a href="registro.php" class="btn btn-blue btn-effect">Únete a nosotros</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <nav id="nav-arrows" class="nav-arrows hidden-xs hidden-sm visible-md visible-lg">
+                    <a href="javascript:;" class="sl-prev">
+                        <i class="fa fa-angle-left fa-3x"></i>
+                    </a>
+                    <a href="javascript:;" class="sl-next">
+                        <i class="fa fa-angle-right fa-3x"></i>
+                    </a>
+                </nav>
+
+
+                <nav id="nav-dots" class="nav-dots visible-xs visible-sm hidden-md hidden-lg">
+                    <span class="nav-dot-current"></span>
+                    <span></span>
+                    <span></span>
+                </nav>
+
+            </div>
+        </section>
+    <!-- END BLOCK : banner0 -->
+
+    <!-- START BLOCK : banner1 -->
+        <main class="site-content" role="main">
+            <section id="home-slider">
+                <div id="slider" class="sl-slider-wrapper">
+
+                    <div class="sl-slider">
+
+                        <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+
+                            <div class="bg-img bg-img-1"></div>
+
+                            <div class="slide-caption">
+                                <div class="caption-content">
+                                    <h2 class="animated fadeInDown">Senderos de Mallorca</h2>
+                                    <span class="animated fadeInDown">Rutas y excursiones por los senderos de Mallorca</span>
+                                    <a href="#" class="btn btn-blue btn-effect">Bienvenido, {nombre}</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+
+                            <div class="bg-img bg-img-2"></div>
+                            <div class="slide-caption">
+                                <div class="caption-content">
+                                    <h2>Senderos de Mallorca</h2>
+                                    <span>Rutas y excursiones por los senderos de Mallorca</span>
+                                    <a href="#" class="btn btn-blue btn-effect">Bienvenido, {nombre}</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+
+                            <div class="bg-img bg-img-3"></div>
+                            <div class="slide-caption">
+                                <div class="caption-content">
+                                    <h2>Senderos de Mallorca</h2>
+                                    <span>Rutas y excursiones por los senderos de Mallorca</span>
+                                    <a href="#" class="btn btn-blue btn-effect">Bienvenido, {nombre}</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <nav id="nav-arrows" class="nav-arrows hidden-xs hidden-sm visible-md visible-lg">
+                        <a href="javascript:;" class="sl-prev">
+                            <i class="fa fa-angle-left fa-3x"></i>
+                        </a>
+                        <a href="javascript:;" class="sl-next">
+                            <i class="fa fa-angle-right fa-3x"></i>
+                        </a>
+                    </nav>
+
+
+                    <nav id="nav-dots" class="nav-dots visible-xs visible-sm hidden-md hidden-lg">
+                        <span class="nav-dot-current"></span>
+                        <span></span>
+                        <span></span>
+                    </nav>
+
+                </div>
+            </section>
+        <!-- END BLOCK : banner1 -->
+
+
+
+
+	<!-- START BLOCK : leyes -->
+			<section id="service">
+				<div class="container-fluid">
+					<div class="row">
+
+						<div class="sec-title text-center">
+							<h2 class="wow">Leyes e información</h2>
+							<p class="wow">Todas las leyes e información que ncesitas para practicar Senderismo</p>
+						</div>
+			<!-- START BLOCK : lista -->
+				<div class="col-md-4 text-center">
+						<h3><a href="{link}">{titulo}</a></h3>
+						<p>{descripcion}</p>
+				</div>
+			<!-- END BLOCK : lista -->
+
+					</div>
+				</div>
+			</section>
+	<!-- END BLOCK : leyes -->
+
+	<!-- START BLOCK : jquery -->
+
+        <script src="js/jquery-1.11.1.min.js"></script>
+
+        <script src="js/bootstrap.min.js"></script>
+
+        <script src="js/jquery.singlePageNav.min.js"></script>
+
+        <script src="js/jquery.fancybox.pack.js"></script>
+
+		<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+        <script src="js/owl.carousel.min.js"></script>
+
+        <script src="js/jquery.easing.min.js"></script>
+
+        <script src="js/jquery.slitslider.js"></script>
+        <script src="js/jquery.ba-cond.min.js"></script>
+
+        <script src="js/wow.min.js"></script>
+
+        <script src="js/main.js"></script>
+    <!-- END BLOCK : jquery -->
+    </body>
+</html>
